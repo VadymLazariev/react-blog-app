@@ -25,16 +25,19 @@ const SignIn = (props: SignInProps) => {
         <form action="">
             <div className="form-group">
                 <label htmlFor="exampleInputEmail1">Email address</label>
-                <input onChange={e => setEmail(e.target.value)} type="email" className="form-control"
+                <input onChange={e => setEmail(e.target.value)} type="email" className="email form-control"
                        id="exampleInputEmail1" aria-describedby="emailHelp"
+                       value={signInForm.email}
+                       aria-label="email"
                        placeholder="Enter email"/>
             </div>
             <div className="form-group">
                 <label htmlFor="exampleInputPassword1">Password</label>
                 <input onChange={e => setPassword(e.target.value)} type="password" className="form-control"
+                       aria-label="password"
                        id="exampleInputPassword1" placeholder="Password"/>
             </div>
-            <button onClick={e => submitForm(e)} className="btn btn-primary w-100">Sign In!</button>
+            <button aria-label="submit" onClick={e => submitForm(e)} className="btn btn-primary w-100">Sign In!</button>
         </form>
     );
 };
