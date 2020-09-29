@@ -38,12 +38,4 @@ describe('Sign in component', () => {
         expect(signUpFormFixture.email).toBe('email');
         expect(signUpFormFixture.password).toBe('password');
     });
-
-    test('It should submit form on button click', () => {
-        const { submit } = setup();
-        const signUpFormFixture = { email: 'email', password: 'password' };
-        fireEvent.click(submit)
-        expect(signUpFormFixture.email).toBe('email');
-        expect(signUpFormFixture.password).toBe('password');
-    });
 })
