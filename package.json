@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/dom": "^7.24.3",
     "husky": "^4.3.0"
   },
   "lint-staged": {
