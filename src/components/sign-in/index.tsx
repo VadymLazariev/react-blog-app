@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
-import { SignInModel } from '../../shared/models/sign-in/sign-in.model';
+import { SignInProps } from './__types__/sign-in.types';
 
-interface SignInProps {
-    onSignInSubmit: (formValue: SignInModel) => void;
-}
-
-const SignIn = (props: SignInProps) => {
-    const [signInForm, setFormValue] = useState({ email: '', password: '' })
+const SignIn: React.FunctionComponent<SignInProps> = (props) => {
+    const [signInForm, setFormValue] = useState({ email: '', password: '' });
 
     const setEmail = (email: string) => {
         setFormValue({ ...signInForm, email });
@@ -40,6 +36,6 @@ const SignIn = (props: SignInProps) => {
             <button aria-label="submit" onClick={e => submitForm(e)} className="btn btn-primary w-100">Sign In!</button>
         </form>
     );
-};
+}
 
 export default SignIn;
