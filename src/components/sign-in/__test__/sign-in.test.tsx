@@ -8,8 +8,8 @@ describe('Sign in component', () => {
     const setup = () => {
         const submitSignInForm = jest.fn();
         const utils = render(<SignIn onSignInSubmit={submitSignInForm}/>)
-        const email = utils.getByLabelText('email');
-        const password = utils.getByLabelText('password');
+        const email = utils.getByLabelText('email') as HTMLInputElement;
+        const password = utils.getByLabelText('password') as HTMLInputElement;
         const submit = utils.getByLabelText('submit');
         return {
             email,
